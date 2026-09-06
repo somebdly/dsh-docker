@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# 运行时配置（含 SSH 凭据）
+config.json
+*.log
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

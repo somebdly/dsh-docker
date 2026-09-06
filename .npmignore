@@ -1,0 +1,7 @@
+# npm pack 排除：运行时产物与个人配置
+__pycache__/
+*.pyc
+config.json
+*.log
+test-*.mjs
+*.tgz
