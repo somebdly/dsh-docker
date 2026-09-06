@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""常驻 SSH 命令执行进程（Host 端 dsh-mcp-gateway-board 使用）。
+"""常驻 SSH 命令执行进程（Host 端 dsh-docker 使用）。
 
 通过 stdin/stdout 与 Node 宿主以「一行一个 JSON」协议通信，复用单个
 paramiko SSH 连接执行远端命令（默认 docker mcp ...）。凭据从环境变量

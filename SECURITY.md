@@ -8,7 +8,7 @@
 ┌─ 用户本机（Windows）───────────────────────────────────────┐
 │ 配置来源（优先级从高到低）                                     │
 │  1. 环境变量 MCPGW_SSH_*（最高优先，不落盘）                  │
-│  2. ~/.dsh/mcp-gateway-board/config.json（用户主目录）        │
+│  2. ~/.dsh/dsh-docker/config.json（用户主目录）                 │
 │  3. dsh profile cordis 行内 config                            │
 │                                                             │
 │  密码 / 密钥口令 → Windows DPAPI 加密后写入 config.json       │

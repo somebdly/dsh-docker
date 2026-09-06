@@ -1,5 +1,5 @@
 {
-  "name": "dsh-mcp-gateway-board",
+  "name": "dsh-docker",
   "version": "0.1.0",
   "description": "Docker MCP Gateway 管理面板：经 SSH 在远端服务器执行 docker mcp 命令，管理 Docker MCP（列出/部署/移除 profile 中的 MCP、搜索/拉取 Docker MCP Catalog）。免构建（纯 ESM：Host 端 Node 原生 import + spawn python paramiko，Client 端零依赖纯 DOM）。",
   "type": "module",

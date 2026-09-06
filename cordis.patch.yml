@@ -1,16 +1,16 @@
-# dsh-mcp-gateway-board bundle patch: inserts the dual-face plugin row into the
+# dsh-docker bundle patch: inserts the dual-face plugin row into the
 # web profile roster. The node half (exports ".") runs in the host process and
 # owns the SSH exec service + docker mcp command wrapper + HTTP routes; the
 # `dsh.client` declaration in package.json makes the browser half (exports
-# "./client", served at /plugins/mcp-gateway-board/client.js) load in the web GUI.
+# "./client", served at /plugins/dsh-docker/client.js) load in the web GUI.
 #
 # Install:  dsh plugin --profile web add link:<this-dir>
 # Initial config (optional) can be overridden in the profile patch layer:
-#   - id: mcp-gateway-board
+#   - id: dsh-docker
 #     config:
 #       ssh:
 #         host: <your-server>
 #         user: <your-user>
 - insert:
-    - id: mcp-gateway-board
-      name: 'dsh-mcp-gateway-board'
+    - id: dsh-docker
+      name: 'dsh-docker'
