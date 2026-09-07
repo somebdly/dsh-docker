@@ -28,7 +28,7 @@ Supports **multiple management targets**: switch between **Local CLI** and **SSH
 
 ### Container & image management (Containers tab)
 - Containers: list / start / stop / restart / remove / logs / inspect / interactive terminal (`docker exec -it`, SSH targets only) / prune stopped containers
-- Create container: `docker run` with ports, environment variables, volumes, and command arguments
+- Create container: `docker run` with ports, environment variables, volumes, and command arguments; "keep running" is enabled by default (appends `tail -f /dev/null` automatically when no command is given, preventing the container from exiting right after start)
 - Images: pull / build (`docker build`) / load (`docker load`) / run
 - Destructive operations (stop / restart / remove / prune) require a confirmation dialog
 
