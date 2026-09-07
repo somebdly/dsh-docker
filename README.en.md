@@ -5,7 +5,7 @@
 `dsh-docker` (plugin id: `dsh-docker`) is a sidebar **Docker** panel plugin for the DeepSeek Harness Web GUI. It unifies two categories of Docker operations into a single build-free web panel:
 
 - **Docker MCP management**: view/deploy/remove MCP servers in profiles, search/pull from the official Docker MCP Catalog, start/stop/restart the MCP Gateway, custom deployments (remote https or local images)
-- **Container & image management**: container list/start/stop/restart/remove/logs/inspect/interactive terminal, prune stopped containers, create containers, pull/build/load/run images
+- **Container & image management**: container list/start/stop/restart/remove/logs/inspect/interactive terminal, prune stopped containers, create containers, pull/build/load/run images, **batch-select and delete images**
 
 Supports **multiple management targets**: switch between **Local CLI** and **SSH remote server** — all tabs (MCP / containers / images) then operate against the currently selected target.
 
@@ -29,7 +29,7 @@ Supports **multiple management targets**: switch between **Local CLI** and **SSH
 ### Container & image management (Containers tab)
 - Containers: list / start / stop / restart / remove / logs / inspect / interactive terminal (`docker exec -it`, SSH targets only) / prune stopped containers
 - Create container: `docker run` with ports, environment variables, volumes, and command arguments; "keep running" is enabled by default (appends `tail -f /dev/null` automatically when no command is given, preventing the container from exiting right after start)
-- Images: pull / build (`docker build`) / load (`docker load`) / run
+- Images: pull / build (`docker build`) / load (`docker load`) / run / delete single / **batch-select and delete** (check rows or select all in the table, then remove multiple images with one `docker rmi`; dangling `<none>` images are removed by ID automatically)
 - Destructive operations (stop / restart / remove / prune) require a confirmation dialog
 
 ### Security design
@@ -184,7 +184,7 @@ Config precedence: **environment variables > `~/.dsh/dsh-docker/config.json` > i
   - Catalog: search the official Docker MCP Catalog; one-click deploy
 - **Containers tab**: two sub-pages — containers (ps) / images
   - Containers: list, start/stop/restart, remove, logs, inspect, open terminal, prune stopped containers, create container
-  - Images: pull, build, load, run
+  - Images: pull, build, load, run, delete single, batch-select and delete
 
 ### Interactive container terminal (SSH targets only)
 
